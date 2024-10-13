@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiljam Herjanto - CV</title>
+    <style>
+        body {
+            background-color: #377A9D;
+            font-family: 'Roboto', sans-serif;
+            color: #FFFFFF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .left-section {
+            max-width: 600px;
+        }
+
+        .photo {
+            width: 600px;
+            height: 300px;
+            background-color: #CCCCCC;>
+        }
+
+        .headline {
+            font-family: 'Roboto Medium', sans-serif;
+            font-size: 72px;
+            margin: 20px 0;
+            color: #FFFFFF;
+        }
+
+        .cv-content {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .button {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 51px;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            width: 300px;
+            box-sizing: border-box;
+        }
+
+        .button.etusivu {
+            background-color: #000000;
+        }
+
+        .button.telia {
+            background-color: #B618F0;
+        }
+
+        .button.dna {
+            background-color: #f598e5;
+        }
+
+        .button.suosittelijat {
+            background-color: #606A76;
+        }
+
+        .right-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .top-button {
+            margin-bottom: 300px;
+        }
+
+        .bottom-buttons {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-section">
+            <img src="https://thumbs.dreamstime.com/b/man-resume-paper-elegant-suit-holding-job-hiring-bright-interior-85197145.jpg" alt="Profile Photo of Wiljam Herjanto" class="photo">
+            <h1 class="headline" id="page-headline">Wiljam Herjanto - CV</h1>
+            <div class="cv-content" id="page-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. 
+                
+                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. 
+            </div>
+        </div>
+
+        <div class="right-section">
+            <a href="#" class="button etusivu top-button" onclick="showPage('home', 'Wiljam Herjanto - CV')">Etusivu</a>
+
+            <div class="bottom-buttons">
+                <a href="#" class="button telia" onclick="showPage('telia', 'Telia Finland')">Telia Finland</a>
+                <a href="#" class="button dna" onclick="showPage('dna', 'DNA Oyj')">DNA Oyj</a>
+                <a href="#" class="button suosittelijat" onclick="showPage('suosittelijat', 'Suosittelijat')">Suosittelijat</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="home" class="page active"></div>
+
+    <div id="telia" class="page">
+        <div class="cv-content">
+        </div>
+    </div>
+
+    <div id="dna" class="page">
+        <div class="cv-content"
+        </div>
+    </div>
+
+    <div id="suosittelijat" class="page">
+        <div class="cv-content">
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId, headlineText) {
+            document.querySelectorAll('.page').forEach(function(page) {
+                page.classList.remove('active');
+            });
+            
+            document.getElementById(pageId).classList.add('active');
+
+            document.getElementById('page-headline').textContent = headlineText;
+        }
+    </script>
+</body>
+</html>
